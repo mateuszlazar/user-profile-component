@@ -31,7 +31,7 @@ class ProfileCard extends Component {
     } = this.props;
 
     const {
-      profilePhoto,
+      userPhoto,
       name,
       hasProfileLike,
       hasProfileFollow,
@@ -57,7 +57,7 @@ class ProfileCard extends Component {
           onClick={this.toggleShareModal}
         />
         <div className="profile-card__header">
-          <img className="profile-card__photo" src={profilePhoto} />
+          <img className="profile-card__photo" src={userPhoto} />
           <div className="profile-card__user-data">
             <p className="profile-card__name">
               {name}

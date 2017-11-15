@@ -20,6 +20,7 @@ const initialState = {
 
 export default function profileReducer(state = initialState, action) {
   const newState = state;
+
   switch (action.type) {
     case FETCH_USER_PROFILE:
       return Object.assign({}, state, {
@@ -56,6 +57,7 @@ export default function profileReducer(state = initialState, action) {
     case ADD_NEW_COMMENT:
       const mockCommentObject = {
         name: 'Mateusz Lazar',
+        userPhoto: mockedProfile.details.userPhoto,
         commentDate: 0,
         content: action.payload
       };

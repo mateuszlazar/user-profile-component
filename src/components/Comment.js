@@ -2,13 +2,13 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const Comment = ({ comment }) => {
-  const { name, commentDate, content } = comment;
+  const { userPhoto, name, commentDate, content } = comment;
 
   return (
     <div className={'comment'}>
       <img
         className={'comment__photo'}
-        /* PHOTO TO DO src={userPhoto}*/
+        src={userPhoto}
       />
       <div className={'comment__details'}>
         <div className={'comment__meta'}>
