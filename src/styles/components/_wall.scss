@@ -1,12 +1,14 @@
 .wall {
-  margin: 10px 0 -60px;
-  padding: 25px 0 0;
+  margin: 10px 0 0;
+  padding: 25px 0 48px;
+  height: 400px;
   box-shadow: $border-shadow;
   border-radius: $border-radius;
+  transition: all 0.3s;
+}
 
-  @include min-screen($tablet) {
-    margin: 10px 0 -100px;
-  }
+.wall--hide {
+  height: 0px;
 }
 
 .wall__new-comment {

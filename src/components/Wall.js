@@ -54,8 +54,10 @@ class Wall extends Component {
     const { isCommentListVisible } = shared;
     const { comments } = profile.userData;
 
+    const commentListState = isCommentListVisible ? '' : 'wall--hide';
+
     return (
-      <div className={'wall'}>
+      <div className={`wall ${commentListState}`}>
         <p className={'link'} onClick={this.toggleComments}>
           { isCommentListVisible ? 'Hide comments' : 'Show comments' } ({comments.length})
         </p>
