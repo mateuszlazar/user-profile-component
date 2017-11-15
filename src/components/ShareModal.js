@@ -14,22 +14,22 @@ const customModalStyle = {
 };
 
 const ShareModal = ({ onClose, isShareModalOpen }) => (
-	<Modal
-		isOpen={isShareModalOpen}
-		onRequestClose={onClose}
-		style={customModalStyle}
-		shouldCloseOnOverlayClick
-	>
-		<p>Share link of this profile!</p>
-		<p>{window.location.href}</p>
-		<button
-			className={`btn btn--primary`}
-			onClick={onClose}
-		>
-			Close Modal
-		</button>
-	</Modal>
-);
+  <Modal
+    isOpen={isShareModalOpen}
+    onRequestClose={onClose}
+    style={customModalStyle}
+    shouldCloseOnOverlayClick
+  >
+    <p>Share link of this profile!</p>
+    <p>{window.location.href}</p>
+    <button
+      className={`btn btn--primary`}
+      onClick={onClose}
+    >
+      Close Modal
+    </button>
+  </Modal>
+  );
 
 ShareModal.propTypes = {
   onClose: PropTypes.func.isRequired,
