@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Comment from './Comment';
 import { Scrollbars } from 'react-custom-scrollbars';
+import Comment from '../Comment/Comment';
 
-
-class CommentsList extends Component {
+class CommentList extends Component {
   render() {
     const { comments, isCommentListVisible } = this.props;
     const commentListState = isCommentListVisible ? '' : 'comment-list--hide';
@@ -23,9 +22,9 @@ class CommentsList extends Component {
   }
 }
 
-CommentsList.propTypes = {
+CommentList.propTypes = {
   comments: PropTypes.array.isRequired,
   isCommentListVisible: PropTypes.bool.isRequired
 };
 
-export default CommentsList;
+export default CommentList;

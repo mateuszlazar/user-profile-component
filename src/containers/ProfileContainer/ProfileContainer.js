@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import ProfileCard from '../components/ProfileCard';
-import Wall from '../components/Wall';
+import ProfileCard from '../../components/ProfileCard/ProfileCard';
+import Wall from '../../components/Wall/Wall';
 
 class ProfileContainer extends Component {
   constructor(props) {

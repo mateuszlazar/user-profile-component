@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as profileActions from '../actions/profile/profileActions';
 import * as sharedActions from '../actions/shared/sharedActions';
-import ProfileContainer from './ProfileContainer';
+import ProfileContainer from './ProfileContainer/ProfileContainer';
 
 class App extends Component {
   render() {

@@ -1,23 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Modal from 'react-modal';
-
-const customModalStyle = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)'
-  }
-};
+import { shareModalStyle } from './shareModalStyle';
 
 const ShareModal = ({ onClose, isShareModalOpen }) => (
   <Modal
     isOpen={isShareModalOpen}
     onRequestClose={onClose}
-    style={customModalStyle}
+    style={shareModalStyle}
     shouldCloseOnOverlayClick
   >
     <p>Share link of this profile!</p>
@@ -29,7 +19,7 @@ const ShareModal = ({ onClose, isShareModalOpen }) => (
       Close Modal
     </button>
   </Modal>
-  );
+);
 
 ShareModal.propTypes = {
   onClose: PropTypes.func.isRequired,

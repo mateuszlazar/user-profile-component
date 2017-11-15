@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import { mockedProfile } from '../mock/profile';
 import {
     FETCH_USER_PROFILE,
@@ -20,6 +21,7 @@ const initialState = {
 
 export default function profileReducer(state = initialState, action) {
   const newState = state;
+  const { likeCount, followersCount } = state.userData.details;
 
   switch (action.type) {
     case FETCH_USER_PROFILE:
@@ -39,20 +41,20 @@ export default function profileReducer(state = initialState, action) {
         isLoading: false,
       });
     case LIKE_USER_PROFILE:
-      newState.userData.details.hasProfileLike = true;
-      newState.userData.details.likeCount = state.userData.details.likeCount + 1;
+      _.set(newState, 'userData.details.hasProfileLike', true);
+      _.set(newState, 'userData.details.likeCount', likeCount + 1);
       return Object.assign({}, state, newState);
     case UNLIKE_USER_PROFILE:
-      newState.userData.details.hasProfileLike = false;
-      newState.userData.details.likeCount = state.userData.details.likeCount - 1;
+      _.set(newState, 'userData.details.hasProfileLike', false);
+      _.set(newState, 'userData.details.likeCount', likeCount - 1);
       return Object.assign({}, state, newState);
     case FOLLOW_USER_PROFILE:
-      newState.userData.details.hasProfileFollow = true;
-      newState.userData.details.followersCount = state.userData.details.followersCount + 1;
+      _.set(newState, 'userData.details.hasProfileFollow', true);
+      _.set(newState, 'userData.details.followersCount', followersCount + 1);
       return Object.assign({}, state, newState);
     case UNFOLLOW_USER_PROFILE:
-      newState.userData.details.hasProfileFollow = false;
-      newState.userData.details.followersCount = state.userData.details.followersCount - 1;
+      _.set(newState, 'userData.details.hasProfileFollow', false);
+      _.set(newState, 'userData.details.followersCount', followersCount - 1);
       return Object.assign({}, state, newState);
     case ADD_NEW_COMMENT:
       const mockCommentObject = {

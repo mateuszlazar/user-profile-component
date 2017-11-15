@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Counter from './Counter';
-import ShareModal from './ShareModal';
+import Counter from '../Counter/Counter';
+import ShareModal from '../ShareModal/ShareModal';
 
 class ProfileCard extends Component {
   constructor(props) {

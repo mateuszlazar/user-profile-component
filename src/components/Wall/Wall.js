@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import CommentsList from './CommentsList';
+import CommentList from '../CommentList/CommentList';
 
 class Wall extends Component {
   constructor(props) {
@@ -61,7 +61,7 @@ class Wall extends Component {
         <p className={'link'} onClick={this.toggleComments}>
           { isCommentListVisible ? 'Hide comments' : 'Show comments' } ({comments.length})
         </p>
-        <CommentsList
+        <CommentList
           comments={comments}
           isCommentListVisible={isCommentListVisible}
         />

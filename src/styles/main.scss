@@ -4,9 +4,10 @@
 @import "general/global";
 @import "general/button";
 
-@import "components/profile-container";
-@import "components/profile-card";
-@import "components/counter";
-@import "components/comment";
-@import "components/comment-list";
-@import "components/wall";
+@import "../containers/ProfileContainer/ProfileContainer";
+
+@import "../components/ProfileCard/ProfileCard";
+@import "../components/Counter/Counter";
+@import "../components/Comment/Comment";
+@import "../components/CommentList/CommentList";
+@import "../components/Wall/Wall";
