@@ -1,0 +1,22 @@
+.counter {
+  padding: 0 20px;
+  text-align: center;
+  min-width: 55px;
+  border-right: 1px solid $color-gray-extra-light;
+
+  &:last-of-type {
+    border-right: none;
+  }
+}
+
+.counter__number {
+  margin-bottom: 0;
+  font-size: $font-size-big;
+  color: $color-orange;
+}
+
+.counter__title {
+  margin-bottom: 0;
+  font-size: $font-size-extra-small;
+  color: $color-gray;
+}

@@ -1,0 +1,12 @@
+.profile-container {
+  width: 320px;
+  padding: 32px 16px 0 16px;
+  background: linear-gradient($color-blue-dark 95px, $color-white 95px);
+  box-shadow: $border-shadow;
+  border-radius: $border-radius;
+  border-bottom: 1px solid $color-white;
+
+  @include min-screen($tablet) {
+    width: 500px;
+  }
+}

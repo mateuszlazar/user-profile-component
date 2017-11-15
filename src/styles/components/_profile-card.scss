@@ -1,0 +1,73 @@
+.profile-card {
+  position: relative;
+  padding: 0 20px;
+  border-radius: $border-radius;
+  background-color: $color-white;
+  box-shadow: $border-shadow;
+
+  @include min-screen($tablet) {
+    padding: 25px 20px;
+  }
+}
+
+.profile-card__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include min-screen($tablet) {
+    flex-direction: row;
+  }
+}
+
+.profile-card__footer {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 0;
+
+  @include min-screen($tablet) {
+    flex-direction: row;
+  }
+}
+
+.profile-card__photo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-top: -50px;
+
+  @include min-screen($tablet) {
+    margin-top: 0;
+  }
+}
+
+.profile-card__user-data {
+  text-align: center;
+
+  @include min-screen($tablet) {
+    margin-left: 20px;
+    text-align: left;
+  }
+}
+
+.profile-card__name {
+  margin: 15px 0 0;
+  color: $color-blue-dark;
+  font-size: $font-size-medium;
+}
+
+.profile-card__address {
+  margin: 5px 0;
+  color: $color-blue-light;
+  font-size: $font-size-small;
+}
+
+.profile-card__counters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+  @include min-screen($tablet) {
+    width: 60%;
+  }
+}

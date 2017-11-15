@@ -1,0 +1,35 @@
+.wall {
+  margin: 10px 0 -60px;
+  padding: 25px 0 0;
+  box-shadow: $border-shadow;
+  border-radius: $border-radius;
+
+  @include min-screen($tablet) {
+    margin: 10px 0 -100px;
+  }
+}
+
+.wall__new-comment {
+  height: 60px;
+  padding: 20px;
+  background: $color-white;
+  border-top: 1px solid $color-gray-extra-light;
+
+  @include min-screen($tablet) {
+    padding-top: 40px;
+    height: 100px;
+  }
+    
+  input {
+    width: 100%;
+    padding: 0 0 5px;
+    font-size: $font-size-medium;
+    border: 0;
+    border-bottom: 2px solid $color-gray-extra-light;
+
+    &:focus {
+      outline: 0;
+      border-bottom: 2px solid $color-gray-light;
+    }
+  }
+}
